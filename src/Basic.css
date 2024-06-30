@@ -1,0 +1,54 @@
+/*  
+Basic Grid
+Presumes a component layout of: 
+    <Application>
+      <Grid>
+        {
+          board.map((rowData: Cell[], row: number) => (
+            <GridRow>
+              {
+                rowData.map((cell, col) => (
+                  <GridCell
+                    className={``}
+                    onClick={(ev) => null}>
+                    { CLJ.str(cell) }
+                  </GridCell>
+                ))
+              }
+            </GridRow>
+          ))
+        }
+      </Grid>
+      <DebugDialog>
+        {CLJ.pprint(turn)}
+      </DebugDialog>
+    </Application>
+
+*/
+
+
+.root {
+  --main-color: blue;
+}
+
+div[role=app] {
+  
+}
+
+div[role=grid] {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+}
+
+div[role=row] {
+  display: flex;
+  margin: auto;
+}
+
+div[role=gridcell] {
+  
+}
+
